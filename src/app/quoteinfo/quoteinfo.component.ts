@@ -8,11 +8,12 @@ import{Quotes} from '../quotes';
   styleUrls: ['./quoteinfo.component.css']
 })
 export class QuoteinfoComponent implements OnInit {
-  newQuote =new Quotes("","",0)
-  @Output() addQuote=new EventEmitter()
+  newQuote =new Quotes("","",0,0)
+  @Output() addQuote=new EventEmitter();
+
   add() {
     this.addQuote.emit(this.newQuote);
-    this.newQuote =new Quotes("","",0)
+    this.newQuote =new Quotes("","",0,0)
   }
   constructor() { }
 
