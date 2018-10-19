@@ -20,4 +20,7 @@ export class QuotesComponent implements OnInit {
     new Quotes("Better late than never","Katana",0),
     new Quotes("Coding is toothpaste","Katana",0),
   ]
+  addNew(quote) {
+    this.quotes.push(quote);
+  }
 }
