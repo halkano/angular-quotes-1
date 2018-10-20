@@ -2,11 +2,21 @@
   <h3 class="text-success">Add new quote</h3>
   <div class="row">
     <form (ngSubmit)="add()" #form="ngForm">
-      <label for="quoteStr">New quote</label>
-      <textarea placeholder="Add tne new quote (maxlength is 70)" [(ngModel)] = "newQuote.quote" name="quoteStr" id="quoteStr" cols="30" rows="5" class="form-control col-md" #quoteStr = "ngModel"v maxlength="70" required></textarea>
-      <label for="author">Author</label>
-      <input placeholder="Enter the author's name" id="author" type="text" class="form-control col-xs-6" name="author" #author="ngModel" [(ngModel)] = "newQuote.author" required>
+      <div class="col-md">
+        <label for="quoteStr">New quote</label>
+        <textarea placeholder="Add tne new quote (maxlength is 70)" [(ngModel)] = "newQuote.quote" name="quoteStr" id="quoteStr" rows="5" class="form-control" [class.is-invalid]="quoteStr.invalid && quoteStr.touched" #quoteStr = "ngModel" maxlength="70" required></textarea>
+      </div>
+      <div class="text-danger" *ngIf='quoteStr.invalid && quoteStr.touched' >
+        <small>This field is required</small>
+      </div>
+      <div class="col-md">
+        <label for="author">Author</label>
+        <input placeholder="Enter the author's name" id="author" type="text" class="form-control" [class.is-invalid] ="author.invalid && author.touched" name="author" #author="ngModel" [(ngModel)] = "newQuote.author" required>
+        <div *ngIf="author.invalid && author.touched">
+          <small class="text-danger">This field can't be empty</small>
+        </div> <br>
       <button class="btn-success">Update</button>
+      </div>
     </form>
   </div>
 
