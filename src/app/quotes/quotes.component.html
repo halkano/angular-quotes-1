@@ -8,7 +8,7 @@
     <hr>
     <div class="row">
       <ol class="col-6">
-        <li *ngFor="let quote of quotes">{{quote.quote}} <br> Submitted on {{quote.submitDate}}</li>
+        <li *ngFor="let quote of quotes">{{quote.quote}} <br> <span class="text-success">Submitted on {{quote.submitDate}}</span></li>
       </ol>
       <ul class="col-3 ml-3 list-unstyled">
         <li class="col-lg-3" *ngFor="let quote of quotes"> <br> {{quote.author}} </li> 

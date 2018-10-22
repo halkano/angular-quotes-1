@@ -1,4 +1,11 @@
-# Quotes
+# The Wise Sayings
+----------------------------------------------------------------------
+#### An Application where you can view already posted quotes and also allows users to post quotes
+#### 22nd October 2018.
+#### By [Raphael Katana](https://github.com/RKatana/angular-quotes.git)
+-----------------------------------------------------------------------
+#### Link to the App
+https://github.io/RKatana/angular-quotes/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
 
