@@ -8,16 +8,16 @@
     <hr>
     <div class="row">
       <ol class="col-6">
-        <li *ngFor="let quote of quotes">{{quote.quote}} </li>
+        <li *ngFor="let quote of quotes">{{quote.quote}} <br> Submitted on {{quote.submitDate}}</li>
       </ol>
       <ul class="col-3 ml-3 list-unstyled">
-        <li class="col-lg-3" *ngFor="let quote of quotes">{{quote.author}} </li>
+        <li class="col-lg-3" *ngFor="let quote of quotes"> <br> {{quote.author}} </li> 
       </ul>
       <ul class="col ml-3 list-unstyled">
-        <li *ngFor="let quote of quotes;let i = index">{{quote.upVotes}}
+        <li *ngFor="let quote of quotes;let i = index"><br> {{quote.upVotes}}
          <button class="btn-xs" (click)="upVote(i)">
            <span class="text-danger"><i class="material-icons">thumb_up</i></span></button> 
-         {{quote.downVotes}}
+          {{quote.downVotes}}
          <button class="btn-xs" (click)="downVote(i)">
            <span><i class="material-icons">thumb_down</i></span></button>
         <button class="btn-danger btn-xs" (click)="delete(i)">Delete</button>

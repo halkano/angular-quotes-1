@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{Quotes} from '../quotes';
+import { detachEmbeddedView } from '@angular/core/src/view';
 
 @Component({
   selector: 'app-quotes',
@@ -14,11 +15,11 @@ export class QuotesComponent implements OnInit {
   }
 
   quotes=[
-    new Quotes("Old is gold","Katana",0,0),
-    new Quotes("What goes around, comes around","Katana",0,0),
-    new Quotes("Not all that glitters is gold","Katana",0,0),
-    new Quotes("Better late than never","Katana",0,0),
-    new Quotes("Coding is toothpaste","Katana",0,0),
+    new Quotes("Old is gold","Katana",0,0, d),
+    new Quotes("What goes around, comes around","Katana",0,0, d),
+    new Quotes("Not all that glitters is gold","Katana",0,0, d),
+    new Quotes("Better late than never","Katana",0,0,d),
+    new Quotes("Coding is toothpaste","Katana",0,0, d),
   ]
   addNew(quote) {
     this.quotes.push(quote);
@@ -33,3 +34,5 @@ export class QuotesComponent implements OnInit {
     this.quotes[index].downVotes++;
   }
 }
+var today= new Date();
+var d= today.toDateString();
