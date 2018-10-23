@@ -1,5 +1,5 @@
-<div class="">
-  <h3 class="text-success">Add new quote</h3>
+<button (click)='toggle()'><span class='text-success'>Add New Quote</span></button>
+<div *ngIf='EnterQuote'>
   <div class="row">
     <form (ngSubmit)="add()" #form="ngForm">
       <div class="col-md">

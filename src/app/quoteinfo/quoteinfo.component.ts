@@ -7,6 +7,7 @@ import{Quotes} from '../quotes';
   styleUrls: ['./quoteinfo.component.css']
 })
 export class QuoteinfoComponent implements OnInit {
+  EnterQuote:boolean=false;
   newQuote =new Quotes("","",0,0, d)
   @Output() addQuote=new EventEmitter();
 
@@ -17,6 +18,9 @@ export class QuoteinfoComponent implements OnInit {
   public isInvalid=true;
   sub(){
     this.isInvalid=false
+  }
+  toggle(){
+    this.EnterQuote=!this.EnterQuote
   }
   constructor() { }
 
